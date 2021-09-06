@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Watch Your Guard</string>
+    <string name="last_notification_tapped_at">Last Notification Tapped at :</string>
+    <string name="next_notification_at">Next Notification at:</string>
+    <string name="sign_in">Sign In</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="enter_mobile_number">Please enter mobile number</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="n_a">N/A</string>
+    <string name="your_notification">Your Notification</string>
+    <string name="confirmation_msg_sign_out">Are you sure want to Sign Out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hi">Hi,</string>
+    <string name="assign_sites_and_duty_time"><![CDATA[Assigned Sites & Duty Time]]></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

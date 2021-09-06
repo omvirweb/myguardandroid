@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501656642174",
+    "project_id": "watchyourguard",
+    "storage_bucket": "watchyourguard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501656642174:android:9972259de361fef2736e2f",
+        "android_client_info": {
+          "package_name": "com.r.notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501656642174-f8m3udgdtncd41o6tn87k4o8a73em8kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc7XNxs0AZ0xP2UNdWKmOKm4JBHH3kEKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501656642174-f8m3udgdtncd41o6tn87k4o8a73em8kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
