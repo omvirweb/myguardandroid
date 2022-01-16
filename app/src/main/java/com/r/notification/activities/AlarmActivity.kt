@@ -230,7 +230,10 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener {
                         this@AlarmActivity
                     ) != null
                 ) {
-                    id = SessionManager().getPrefIntData(YDelegate.NOTIFICATION_ID,this@AlarmActivity)!! + 1
+                    id = SessionManager().getPrefIntData(
+                        YDelegate.NOTIFICATION_ID,
+                        this@AlarmActivity
+                    )!! + 1
                 } else {
                     id += 1
                 }
@@ -437,7 +440,7 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener {
                 YDelegate.NOTIFICATION_INTERVAL_TIME,
                 this@AlarmActivity
             )!!.toInt()
-
+            Log.d("TAG", "getDifference: "+intervalMinute)
             val totalMinute = 60
             var countOfLoop = 0
             val currentMinute = minute
@@ -650,13 +653,6 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener {
                         if (response.code() == 200) {
                             if (response.body()!!.getStatus() == YDelegate.SUCCESS) {
 
-                                if (SessionManager().getPrefData(
-                                        YDelegate.NOTIFICATION_INTERVAL_TIME,
-                                        this@AlarmActivity
-                                    ).isNullOrEmpty()
-                                ) {
-                                    getDifference()
-                                }
 
                                 SessionManager().setPrefData(
                                     YDelegate.NOTIFICATION_TITLE,
@@ -673,6 +669,19 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener {
                                     response.body()!!.getData()!![0]!!.getIntervalTime(),
                                     this@AlarmActivity
                                 )
+                                Log.d("onResponse", "onResponse:NOTIFICATION_ "+SessionManager().getPrefData(
+                                    YDelegate.NOTIFICATION_INTERVAL_TIME,
+                                    this@AlarmActivity
+                                ))
+                                getDifference()
+                                /*if (SessionManager().getPrefData(
+                                        YDelegate.NOTIFICATION_INTERVAL_TIME,
+                                        this@AlarmActivity
+                                    ).isNullOrEmpty()
+                                ) {
+                                    getDifference()
+                                }*/
+
                             } else {
                                 Utils.toast(
                                     this@AlarmActivity,
@@ -1414,7 +1423,7 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener {
                                         if (x.after(calendar1.time) && x.before(calendar2.time)) {
                                             getNotificationIntervalTime(userToken, userId)
                                             getGeoLocationGatheringTime(userToken, userId)
-                                            getDifference()
+                                            //getDifference()
                                         } else {
                                             Utils.toast(
                                                 this@AlarmActivity,

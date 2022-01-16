@@ -44,12 +44,11 @@ class LoginActivity : AppCompatActivity() {
             this@LoginActivity
         )
 
-        SessionManager().setPrefData(
-            YDelegate.NOTIFICATION_INTERVAL_TIME,
-            "5",
-            this@LoginActivity
-        )
-
+//        SessionManager().setPrefData(
+//            YDelegate.NOTIFICATION_INTERVAL_TIME,
+//            "5",
+//            this@LoginActivity
+//        )
 
         if(isLocationEnabled()){
             requestPermissions()
